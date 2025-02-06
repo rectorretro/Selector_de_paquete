@@ -1,0 +1,27 @@
+Paquetes
+
+Basico Lite -> 30Mbps $390
+
+Medium basico residencial -> 50 Mbps/$490 Residencial  
+
+Medium basico plus comercal -> 50 Mbps/$690 comercial -> Simetrico
+
+Intermedio Residencial -> 70 Mbps/$690 Residnecial 
+
+Intermedio pro comercial -> 70 Mbps/$890 comercial
+
+Gamer residencial -> 100 Mbps/$990 Residnecial 
+
+Premium comercial -> 100 Mbps/$1190 comercial 
+
+Gold comercial -> 150 Mbps/ $1500 Mbps.
+
+Dispositivos
+
+Televisiones
+Laptops
+Computadoras
+Celulares
+Consolas
+
+si tv = 1 {} tv >= 2{}

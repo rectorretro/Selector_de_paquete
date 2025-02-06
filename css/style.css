@@ -1,0 +1,277 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+*{
+    font-family: Montserrat;
+    margin: 0;
+    padding: 0;
+}
+
+
+body{
+    --color-text:#fff;
+    --dark-color:#7375a5;
+    --darkest-color:#2b364a;
+    font-family: 'Montserrat';
+    margin: 0;
+    color: #eee;
+    background: linear-gradient(135deg,#21a3a3,#6cf3d5,#21a3a3);
+}
+
+.header{
+    position: relative;
+    top: 0;
+    z-index: 4;
+
+}
+
+.header__titulo{
+    text-align: center;
+    padding: 10px;
+    background-color:#227278;
+    
+    position: sticky;
+    font-size: 1em;
+}
+
+.header__titulo h1{
+    font-size: 1.5em;
+}
+
+form{
+    background-color: var(--darkest-color);
+    padding: 20px 0;
+    max-width: 500px;
+    margin: auto;
+    box-shadow: 0 0 55px #FFF2;
+    margin-top: 50px;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 100;
+    margin-bottom: 20px;
+    border-radius: 30px
+    
+}
+
+.form_input{
+    padding: 6px 20px;
+}
+
+h2{
+    text-align: center;
+    margin: 0;
+    margin-bottom: 20px;
+    font-weight: 400;
+    font-size: 1.2em;
+    padding: 10px;
+    cursor: pointer;
+    
+}
+input, textarea, select{
+    width: 100%;
+    color: #eee;
+    box-sizing: border-box;
+    padding: 6px 12px;
+    border: none;
+    border: 1px solid var(--color-text);
+    box-shadow: 0 0 5px #0003;
+    background-color: transparent;
+    border-radius: 4px;
+    font-family: 'Montserrat';
+}
+
+
+
+option{
+    background-color: #222;
+}
+
+textarea{
+    min-width: 100%;
+    resize: none;
+    min-height: 100px;
+    min-width: 200px;
+    font-family: 'Montserrat';
+    font-size: small;
+}
+
+label{
+    font-size: 1em;
+    font-weight: 600;
+    line-height: 2;
+}
+
+fieldset{
+    border-radius: 6px;
+    border: 4px solid var(--dark-color);
+    padding: 0 20px 20px 20px;
+    margin: 20px;
+}
+
+legend{
+    font-size: large;
+    font-weight: 500;
+    padding: 0 6px;
+    color: #fff;
+
+}
+
+a{
+  color: var(--color-text); 
+  text-decoration: none;
+}
+
+a:active{
+    color: #6cf3d5;
+}
+
+.checkbox_container{
+    display: block;
+}
+
+.check_punto:checked{
+    color: red;
+}
+
+.paquete_container{  
+    border-radius: 30px;
+    width: 80%;
+    
+    margin: auto;
+    margin-top: 15px;
+    margin-bottom: 25px;
+    
+}
+.coco{
+    margin: 10px;
+    height: 30dvh;
+}
+
+.paquete{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    border: 5px solid #227278;
+    background-color: var(--darkest-color);
+    border-radius: 30px;
+    padding: 1em;
+    
+}
+
+
+
+.paquete h2{
+    padding: 8px;
+    font-weight: 700;
+    font-size: .8em;
+    margin-top: 1em;
+}
+
+.paquete span{
+    font-weight: 600;
+    outline: solid #fff 1px;
+    padding: 8px;
+    border-radius: 20px;
+    letter-spacing: 2px;
+    transition: border-radius .5s linear,letter-spacing .3s linear,font-weight .3s linear ;
+}
+.paquete span:hover{
+    font-weight: 900;
+    letter-spacing: 0;
+    border-radius: 30px;
+}
+
+.paquete p{
+    font-weight: 600;
+    margin: 15px;
+    display: block;
+    transition: display .5s linear;
+}
+
+.paquete .velocidad{
+    font-weight: 800;
+    font-size: 1.5em;
+}
+
+.paquete .precio{
+    font-size: 1em;
+    letter-spacing: .15em;
+}
+
+
+.boton_container{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    align-items: center;
+}
+
+.boton__selector{
+    background-color:#115258;
+    margin: 20px;
+    padding: 10px;
+    border-radius: 30px;
+    border: solid 1px #003238;
+    color: #fff;
+    font-weight: 700;
+    letter-spacing: 1px;
+    transition: letter-spacing .3s linear;
+}
+
+.boton__selector:hover{
+    cursor: pointer;
+    background-color: #227278;
+}
+
+.boton__selector:active{
+    letter-spacing: 0px;
+}
+
+
+@media (min-width:800px) {
+
+    
+.header{
+    position: sticky;
+    top: 0;
+    z-index: 4;
+
+}
+
+.header__titulo{
+    text-align: center;
+    padding: 20px;
+    background-color:#227278;
+    filter: drop-shadow(1px .5px 2px #fff);
+    position: sticky;
+}
+    .paquete_container{    
+        display: block;
+        position: relative;
+        width: 35%;
+        align-items: center;
+        border-radius: 30px;
+        background-color: var(--darkest-color);
+        margin: auto;
+        margin-bottom: 25px;
+    }
+
+    .coco{
+        margin: 10px;
+        height: 30dvh;
+    }
+    .paquete h2{
+        padding: 8px;
+        font-weight: 700;
+        font-size: 2em;
+    
+    }
+  
+
+    .paquete .precio{
+        font-size: 1.2em;
+        letter-spacing: .3em;
+    }
+
+    
+    
+}

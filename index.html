@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>PAQUE TE DE INTERNET A LA MEDIDA</title>
+</head>
+
+<body>
+    <header class="header">
+        <div class="header__titulo">
+            <h1><span><a href="https://internetproitec.com.mx/" target="_blank">PROITEC</a></span> tu mejor opción</h1>
+        </div>
+        
+    </header>
+    <div>
+        <form action="">
+            <h2>COMPRUEBA CUÁL ES TU MEJOR OPCIÓN </h2>
+
+            <fieldset><!-- Simple inputs -->
+                <legend>Dispositivos que requieren internet</legend>
+                <div class="form_input">
+                    <label for="nombre">Televisiones</label><!--Union mediante ID-->
+                    <input type="number" placeholder="No.Televisiones" id="tv" value="0" min="0">
+                </div>
+                <div class="form_input">
+                    <label>Consolas de videojuegos (xbox-play station-nintendo switch)<!--Union mediante encerrar-->
+                        <input type="number" placeholder="No.Consolas" id="consola" value="0" min="0" max="99"
+                            pattern="[0-9\.]+">
+                    </label>
+                </div>
+                <div class="form_input">
+                    <label>Celulares<!--Union mediante encerrar-->
+                        <input type="number" placeholder="No.Celulares" id="celular" value="0" min="0" max="99">
+                    </label>
+                </div>
+                <div class="form_input">
+                    <label>Laptops/PC<!--Union mediante encerrar-->
+                        <input type="number" placeholder="No.Pcs" id="pc" value="0" min="0" max="99">
+                    </label>
+                </div>
+                <div class="form_input">
+                    <label>Tablets<!--Union mediante encerrar-->
+                        <input type="number" placeholder="No.Pisos" id="tablet" value="0" min="0" max="99">
+                    </label>
+                </div>
+
+
+            </fieldset>
+            <fieldset>
+                <legend>Amplia covertura</legend>
+                <div class="form_input">
+                    <label>Pisos de la vivienda<!--Union mediante encerrar-->
+                        <input type="number" placeholder="No.Tablets" id="router" value="0" min="0" max="99">
+                    </label>
+                </div>
+
+                <div class="form_input checkbox_container">
+                    <label for="check_demanda">Alta demandanda de internet </label>
+                    <input type="checkbox" name="check_demanda" id="" class="check_punto" value="1">
+
+
+                </div>
+            </fieldset>
+
+
+
+        </form>
+        <div class="boton_container">
+            <button class="boton__selector" id="boton_selector">Generar mejor opción</button>
+        </div>
+
+        <div class="paquete_container">
+            <div id="coco"></div>
+        </div>
+    </div>
+
+
+
+</body>
+<script src="./js/paquetes.js"></script>
+
+</html>
