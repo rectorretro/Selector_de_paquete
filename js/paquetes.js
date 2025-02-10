@@ -38,7 +38,7 @@ function simetrico(paquetes,dispositivos){
 
 
 function Paquete_electo(paquete){
-    document.querySelector('#coco').innerHTML  = 
+    document.querySelector('#fibra').innerHTML  = 
     `<div class = 'paquete'>
     <h2><span> ${paquete.nombre} </span></h2>
     <p class = 'velocidad'> ${paquete.velocidad} Mbps ${paquete.simetrico ? 'simetricos!!!': ''}</p>
@@ -73,30 +73,50 @@ const P_simetricos = [Mbpc,Ipc,Pc,Gc]
 const Paquetes = [].concat(P_no_simetricos,P_simetricos);
 
 
+/**
+ * Inalabricos
+ * 3 - 350
+ * 4 - 450
+ * 5 - 500
+ */
+
+
 
 //no_simetrico(Paquetes,dispositivos);
 
 //console.log(dispositivos.get('simetrico'))
 //no_simetrico(P_no_simetricos,dispositivos);
-document.querySelector('#boton_selector').onclick = function(){
+document.querySelector('#coco').onclick = function(){
+    var antes = document.querySelector('#antes');
+    antes.style.display = 'none';
+    console.log('coco')
+}   
+
+document.querySelector('#munch').onclick = function(){
+    var antes = document.querySelector('#antes');
+    antes.style.display = 'none';
+    console.log('munch')
+}   
+document.querySelector('#boton_selector_f').onclick = function(){
+    
     var checkValue 
     //document.querySelector('.check_punto').value != 1 ? checkValue = false : checkValue = true;
     console.log(document.querySelector('.check_punto').checked);
     var ct = 0;
-    var pisos = parseInt(document.querySelector('#router').value);
-    ct = parseInt(document.querySelector('#celular').value);
-    ct = ct + parseInt(document.querySelector('#tablet').value);
+    var pisos = parseInt(document.querySelector('#router_f').value);
+    ct = parseInt(document.querySelector('#celular_f').value);
+    ct = ct + parseInt(document.querySelector('#tablet_f').value);
     //console.log(ct);
-    dispositivos.set('tv',parseInt(document.querySelector('#tv').value));
+    dispositivos.set('tv',parseInt(document.querySelector('#tv_f').value));
     dispositivos.set('smart_tablet',ct);
-    dispositivos.set('pc',parseInt(document.querySelector('#pc').value));
-    dispositivos.set('consola',parseInt(document.querySelector('#consola').value))
+    dispositivos.set('pc',parseInt(document.querySelector('#pc_f').value));
+    dispositivos.set('consola',parseInt(document.querySelector('#consola_f').value))
 
     pisos >=2 || document.querySelector('.check_punto').checked? dispositivos.set('router',true) : dispositivos.set('router',false); 
     dispositivos.set('simetrico',dispositivos.get('router'))
     
     dispositivos.get('simetrico') ? simetrico(P_simetricos,dispositivos) : no_simetrico(P_no_simetricos,dispositivos)// ;
-    document.querySelector('#boton_selector').innerHTML= `Generar otra opción`;
+    document.querySelector('#boton_selector_f').innerHTML= `Generar otra opción`;
     /*dispositivos.get('tv') == 1 & dispositivos.get('smart_tablet') == 5 & dispositivos.get('pc') == 1  & dispositivos.set('consola') == 0 ? Paquete_electo(BLite) : (
         dispositivos.get('simetrico') ? simetrico(P_simetricos,dispositivos) : no_simetrico(P_no_simetricos,dispositivos)// ;
     )*/
